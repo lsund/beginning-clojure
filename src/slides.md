@@ -1,8 +1,8 @@
 ---
-title: Title of Your Talk
-subtitle: Subtitle of Your Talk
-author: Your Full Name
-date: September 2017, Location
+title:      Beginning Clojure - A Diary
+subtitle:   From Haskell to Lisp
+author:     Ludvig Sundström
+date:       October 2017, Bonn
 colorlinks: true
 linkcolor: black
 classoption:
@@ -21,7 +21,9 @@ classoption:
   \item And I like it.
 }
 
-# Section One
+# Clojure
+
+- Pros
 
 ## I Can LaTeX
 
