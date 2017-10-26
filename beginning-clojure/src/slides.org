@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil
+
+#+TITLE: From Haskell to Clojure
+#+AUTHOR: Ludvig Sundström
+#+DATE: November 2017, Bonn
+#+SUBTITLE: a discussion about types
+#+EXPORT_FILE_NAME: test.md
+#+OPTIONS: -:nil
+#+OPTIONS: ':nil
+
+
+---
+title:      From Haskell to Clojure
+subtitle:   a discussion about types
+author:     Ludvig Sundström
+date:       November 2017, Bonn
+colorlinks: true
+linkcolor: black
+classoption:
+---
+
+* Contents
+- Origins and Creators
+- Design Goals and Use cases
+- Programming problems
+- Environment
+
+* Origins and Creators
+** Haskell
+** Clojure
+
+``` {.hs include=src/listings/Sample.hs snippet=unsafe-records}
+```
