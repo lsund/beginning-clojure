@@ -1,5 +1,7 @@
 # "Automating the Build of your Technical Presentation" -- The Template
 
+This repository is a copy of [Oscar Wickstroms presentation template](https://github.com/owickstrom/automating-the-build-of-your-technical-presentation-template)
+
 This is a template for technical presentations written in Markdown, generating
 PDF output using [Pandoc][] and [Beamer][]. Source code snippets are included
 using [pandoc-include-code][]. Diagrams are generated using [Graphviz][] and/or
