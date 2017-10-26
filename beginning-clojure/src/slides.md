@@ -1,51 +1,122 @@
 ---
 title:      Beginning Clojure - A Diary
-subtitle:   From Haskell to Lisp
+subtitle:   From Haskell to Clojure
 author:     Ludvig Sundström
-date:       October 2017, Bonn
+date:       November 2017, Bonn
 colorlinks: true
 linkcolor: black
 classoption:
 - dvipsnames
 ---
 
-## Introduction
+## Contents
 
-- Something
-- Another thing
-- The last one
+- Some haskell things
+- Some clojure things
+- intersection, union and difference
 
-\notelist {
-  \item I have stuff to say.
-  \item This is a list.
-  \item And I like it.
-}
+# Origins and Creators
 
-# Clojure
+## Origins and Creators: Haskell
 
-- Pros
+## Origins and Creators: Clojure
 
-## I Can LaTeX
+# Syntax
 
-\centerline{\Large{\textit{I can embed \LaTeX as well.}}}
+<!--- People that are used to some tool often that they like often
+don't think about that theonce had to learn the rule/philosophy of
+this tool.
+-->
 
-<div class="notes">
-And I can writes notes here in HTML.
-</div>
+- Clojure has no syntax, no indentation, no magic
 
-# Section Two
+- JSX is something you have to learn, hiccup is just a clojure datastructure.
 
-## A Complete File
+``` {.js include=src/listings/sample.js snippet=jsx}
+```
+``` {.clj include=src/listings/sample.clj snippet=hiccup}
+```
+## Syntax: Clojure
 
-``` {.c include=src/listings/hello.c}
+``` {.clj include=src/listings/sample.clj snippet=vars dedent=4}
 ```
 
-## Just A Snippet
-
-``` {.c include=src/listings/hello.h snippet=the-good-part dedent=4}
+``` {.clj include=src/listings/sample.clj snippet=vars dedent=4}
 ```
 
-# Section Three
+## Syntax: Haskell
+
+# Environment
+
+## Environment: Clojure
+
+- clj/cljs/cljs
+
+- The future of programming?
+
+- Webassembly (clojure head start with cljc)
+
+- Prefix notation allows for naturally variable number of arguments
+
+- hosted language
+
+- Drawback: configuration difficult
+
+## Environment: Haskell
+
+## Production
+
+<!--- The joy and agony of haskell in production
+-->
+
+## Developing style
+
+### Type driven development
+
+- Haskell types are like sets, except that they contain 'bottom'
+
+- Integer like N and bottom which represents
+
+- Typical to start a program by laying out the types for the program
+
+``` {.hs include=src/listings/Sample.hs snippet=type-driven-development}
+```
+
+### Data Driven development
+
+- Homoiconic (program by assembling lisp data structures)
+
+- Might seem like a syntax curiosity, but has huge implications.
+
+- Think about code differently
+
+- Rainbow delemiters
+
+# Refactoring
+
+## Refactoring in haskell
+
+- Pureness
+
+- Type checker tells you when you break something
+
+# Interactive Programming
+
+- ghci
+
+- lein repl
+
+# Argument passing and dispatch
+
+- maps and multimethods
+
+- function application and pattern matching
+
+# Data Transformations
+
+- Thread macros
+
+- Composing functions
 
 ## A Graphviz Diagram
 
