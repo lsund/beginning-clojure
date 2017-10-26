@@ -6,7 +6,6 @@
 #+SUBTITLE: a discussion about types
 #+EXPORT_FILE_NAME: test.md
 #+OPTIONS: -:nil
-#+OPTIONS: ':nil
 
 
 ---
@@ -17,6 +16,7 @@ date:       November 2017, Bonn
 colorlinks: true
 linkcolor: black
 classoption:
+- dvipsnames
 ---
 
 * Contents
@@ -28,6 +28,3 @@ classoption:
 * Origins and Creators
 ** Haskell
 ** Clojure
-
-``` {.hs include=src/listings/Sample.hs snippet=unsafe-records}
-```
