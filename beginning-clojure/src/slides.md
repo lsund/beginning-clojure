@@ -1,6 +1,6 @@
 ---
 title:      From Haskell to Clojure
-subtitle:   a discussion about types
+subtitle:   a discussion about programming
 author:     Ludvig Sundström
 date:       November 2017, Bonn
 colorlinks: true
@@ -11,15 +11,33 @@ classoption:
 
 ## Contents
 
+- Why talk about languages?
 - Origins and Creators
 - Design Goals and Use cases
 - Programming problems
 - Environment
 
+## Why talk about languages?
+
+<!---
+http://dev.stephendiehl.com/nearfuture.pdf
+
+* The economic support of a language.
+* The community around a language
+* The front end and syntax
+* The implementation of the compiler
+
+It just feels readable.         -> It looks like this other language I know.
+It’s like X but more practical. -> “There’s a library for my domain”.
+It’s designed for humans .      ->  The example code masks vast complexity
+“It’s a modern language”.       ->  “I saw it on HN last week”
+It’s lightweight                -> I was able to install the compiler
+-->
+
 
 # Origins and Creators
 
-## Origins and Creators: Haskell
+## Haskell
 
 <!--- Following the release of miranda in 1985, an interest in lazy functional
 languages grew. By 1987 more than a dozen lazy purely functional languages existed.
@@ -33,29 +51,46 @@ Kevin Hammond, John Hughes, Simon Peyton Jones, Erik Meijer and Philip Wadler.
 Haskell grew as a active merge of several languages, by many people over a long time.
 Different haskell versions differ alot.
 
-'Avoid success at all costs'
+Haskell motto 'Avoid success at all costs'
 -->
 
 - Miranda ('85) large influence of lazy purely functional languages.
+
 - at FPCA '87, a commettee was formed in attempt to create a unified language.
+
 - Committee's efforts result in haskell ('90)
 
 ## Origins and Creators: Clojure
 
-<!--- Rich hickey made clojure for himself.
-Had it with writing concurrent programs in object oriented languages for 18 years.
+<!--- Rich hickey had an idea for a better way to write programs, after he'd had
+it with writing concurrent programs in object oriented languages for 18 years.
 
 At clojurec conj 2017 he opened his keynote with saying that:
 "10 years ago, clojure was released. ... I told my wife: If a hundred people used this
 , that'd be ridiculously outrageous. And that's not what happened."
 
-Initially, Clojure was an effort from a single individual with one idea. Clojure was
-designed with some big choices on what to leave out.
+Riding the wave of functional programming hype?
+
+Rich hickey great at giving talks...
 
 -->
 
-# Design and Use cases
+- Rich Hickey gets an idea...
+
+- Quickly spawned a large community to help out with the language
+
+- Cognitect now maintains the langauge
+
+# Design Philosophy and Use cases
+
+## Clojure
 <!---
+
+Clojure emphesizes pure functions and immutable data. And being a lisp,
+metaprogramming and viewing code as data is a big part. Clojure is not only a
+modern, clean lisp, it also carries some new ideas. Everything is not a list,
+clojure programmers make heavy use of maps and vectors. But more importantly,
+clojure
 
 What is clojure good at?
 
