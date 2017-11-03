@@ -58,21 +58,60 @@ It’s lightweight                -> I was able to install the compiler
 
 # Origins and Creators
 
+## Clojure
+
+- Rich Hickey gets an idea...
+
+- Quickly spawned a large community around the language
+
+- Cognitect now maintains the langauge and related technologies
+
+<!---
+
+Rich hickey had an idea for a better way to write programs, after he'd had
+enough with writing concurrent programs in object oriented languages for 18.
+
+He decided to make clojure his life-project and worked independently on clojure
+for a couple of years until he decided to open up the code and travel around
+talking publicly about clojure. Being a lisp, clojure was extreamly well
+recieved. It seems like even Rich did not foresee clojures success.
+
+At clojureconj 2017 he opened his keynote with saying that:
+"10 years ago, clojure was released. ... I told my wife: If a hundred people used this
+, that'd be ridiculously outrageous. And that's not what happened."
+
+I'll have to attribute part of clojures success to Rich Hickeys excellent
+abilities to sell his ideas in public speaking and to give talks in general.
+
+
+TODO
+Riding the wave of functional programming hype?
+
+-->
+
 ## Haskell
 
-<!--- Following the release of miranda in 1985, an interest in lazy functional
-languages grew. By 1987 more than a dozen lazy purely functional languages existed.
-At the conference on Functional Programming Languages and Computer Architecture,
-a commettee was formed in attempt to create a unified language as a basis for future
-research.
+<!---
 
-Just to mention some names (far from complete)
-Kevin Hammond, John Hughes, Simon Peyton Jones, Erik Meijer and Philip Wadler.
+Haskell is a completely different story.
+Following the release of miranda in 1985, an interest in strongly typed lazy
+functional languages grew. By 1987 more than a dozen such languages existed,
+and basically everyone that wanted to write an article needed to first define
+the programming language he or she were using.
 
-Haskell grew as a active merge of several languages, by many people over a long time.
-Different haskell versions differ alot.
+In reaction to this, a commettee were formed at the conference on Functional
+Programming Languages and Computer Architecture. The purpose of this commetee
+was to create a unified language that would serve as a tool for future research.
+This language became Haskell.
 
-Haskell motto (that haskell proponents like to cite) 'Avoid success at all costs'
+Many scienctists and practicioners such as Kevin Hammond, John Hughes, Simon
+Peyton Jones, Erik Meijer and Philip Wadler contributed ideas from their
+respective fields and work.
+
+With time, haskell was more widely adopted by the masses and is accepted
+the de-facto standard language for FP as whole. However, the languages
+experimental status remains. 'Avoid success at all costs' is a motto that
+is cited alot in haskell [sammanhang].
 -->
 
 - Miranda ('85) large influence of lazy purely functional languages.
@@ -81,54 +120,32 @@ Haskell motto (that haskell proponents like to cite) 'Avoid success at all costs
 
 - Committee's efforts result in haskell ('90)
 
-## Clojure
+- Avoid success at all costs
 
-<!--- Rich hickey had an idea for a better way to write programs, after he'd had
-it with writing concurrent programs in object oriented languages for 18 years.
-
-At clojurec conj 2017 he opened his keynote with saying that:
-"10 years ago, clojure was released. ... I told my wife: If a hundred people used this
-, that'd be ridiculously outrageous. And that's not what happened."
-
-Riding the wave of functional programming hype?
-
-Rich hickey great at giving talks...
-
--->
-
-- Rich Hickey gets an idea...
-
-- Quickly spawned a large community to help out with the language
-
-- Cognitect now maintains the langauge and related technologies
-
-# Design Philosophy and Use cases
+# Design Philosophy and Usage in the real world
 
 ## Clojure
 <!---
 
-Clojure emphesizes pure functions and immutable data. And being a lisp,
-metaprogramming and viewing code as data is a big part. Clojure is not only a
-modern, clean lisp, it also carries some new ideas. Everything is not a list,
-clojure programmers make heavy use of maps and vectors.
+The core idea of clojure is simplicity. The idea is to pick out the elements in
+programming that are complex, and replace them with simple things. Essentially,
+it comes down the idea that data itself is simple. Ideomatic clojure uses
+constructs that deal with data, without wrappers and indirections. Constructs
+like pure functions and immutable data-structures.
 
-For being a functional language, clojure is in heavy use in the industry.
-But the reason clojure is popular is not only attributed its "cleanness".
-Clojure was designed, like most new programming languages to solve a specific
-set of problems in a better way. The main goal was making programming in real
-business applications easier.
+Clojure on the other hand won't force you to do anything. A clojure programmer
+just wants to get his job done. He has the opinion that enforcing a type
+strong type system and advanced abstraction techniques with it will just slow
+him down. In clojure, you can opt-in to type contracts at any point you want to.
+In clojure, you can implemnet an interface called appendable. You can even call
+it monoid, and get the same advantages that a haskell programmer would get
+from the monoid typeclass. But you don't have to, and nobody is going to tell
+you that you need to.
 
-The typical clojure programmer just wants to get his job done. He is pretty
-indifferent to advanced mathematical concepts, not because he hates mathematics,
-but because he doesn't believe they'll help him finish his job at the end of the
-day.
-
-Why? Because he realizes that in the real world, informatino processing
-dominates logic. In addition to this real programs have a database, libraries
-and other programs they talk to. Even the most interesting
-applications from a modern technological standpoint
-are information driven. You can't explain how to drive a car
-or how to play go using only logic.
+Why is this good? Because in the real world real world, information processing
+dominates logic. The actual part of your program that you can control with
+static compile-time checks is thus uninportant next to the other problems you'll
+face when developing a real system.
 
 Typical, real-world, useful programs are:
 
@@ -139,56 +156,70 @@ Interact with other systems.
 Interact with humans.
 Remain in use for a long time.
 
-Summarized as: Information driven situated programs. Clojure are designed for
-these kind of programs.
+Arguably even the most interesting modern applications from a research are
+information, not logic driven. You can't explain how to drive a car or how to
+play go using only logic.
+
+TODO
+metaprogramming and viewing code as data is a big part. Clojure is not only a
+modern, clean lisp, it also carries some new ideas. Everything is not a list,
+clojure programmers make heavy use of maps and vectors.
+-->
 
 ## Haskell
 
-<!---
-Even though an (old) experimental language with many practical flaws, haskell is
-often seen as the most elegant, state-of-the-art language we have in FP. It
-makes heavy use of mathematical abstractions and other concepts, not the least
-from category theory, the branch of mathematics describing abstraction of
-abstractions.
+- Strong, static type system
 
-Haskell is pure, with strong types and global type inference. Haskell
-programmers are expected to be able to model their problem domain in terms
-of types. Applying type driven development in this way, you're often forced
-to do alot of thinking up-front, and sometimes forced to approach the problem
-in different ways than what you initially thought.
+- Good at composing things
+
+- Not trying to be java/python
+
+<!---
+
+Haskell has a strong static type-system which means it's harder to get runtime-
+errors than to not get runtime errors. To obtain freedom and elegance while
+maintaining this safety, haskell makes use of very few, but very powerful
+abstractions, that gets used everywhere. Many of haskells abstractions comes
+from category theory, a branch of mathematics looking at the world using only
+compositions. Naturally, haskellers are good at composing things. Not only
+functions but promises, ..., ..., (and when is it useful). And since
+composition is the only thing we do all day, many of these constructs can
+be invaluable.
+
+Haskell programmers model their problem domain in terms of types. Applying type
+driven development in this way, you're often forced to do alot of thinking
+up-front, and sometimes forced to approach the problem in different ways than
+what you initially thought.
 
 Haskell excels in error-prone applications where it's easy to make mistakes such
 compilers or parsers. The point of the type system is not to work against the
 programmer, but to catch illegal state. It gives you free tests, but that's not
 the only thing. I'll come back to types later.
 
-As a development platform, haskell is not java/python. It does not have a
-rails framework, and many libraries are experimental or undocumented. It can be
-more difficult you need to connect to Microsoft SQL server. It often comes
-down to: if you're not going to write that library, no one else will.
+As already discussed, haskell is experimental. That means that it does not have
+a rails framework, or huge corperations pouring money into the language.
+Naturally, many libraries are experimental or undocumented. If you need to
+connect to Microsoft SQL server, it can be difficult. It often comes down to: if
+you're not going to write that library, no one else will.
 
-Especially in the last 5 years, haskell and haskell-like languages have hit the
-industry, the most famous example being facebooks anti-spam engine. However,
-most haskell usage in the real world stems from hobbyists or academics that
-use haskell as a vehicle for parts of their work.
+However, in the last 5 years haskell has hit the industry, the most famous
+example being facebooks anti-spam engine. However, most haskell usage in the
+real world stems from hobbyists or academics that use haskell as a vehicle for
+parts of their work.
 
 Reasons why haskell adoption is low:
 
 IDE
-Commercial databases bindings (Microsoft SQL, Oracle)
-Memory usage difficult to reason about (lazyness)
-
-TODO Particularly Good
-
-- Type classes
-- Laziness
-* Single machine concurrency
+Memory usage difficult to reason about (lazyness, problem in real-world applications)
+Commercial database bindings (Microsoft SQL, Oracle)
+Idea that when we have types we don't need documentation.
 
 -->
 
+# Haskell vs Clojure
 ## Haskell vs Clojure
 
-- Inconsistencies and Typos in Clojure
+- More about the type system and its benefits
 
 - What about the real problems in software development?
 
@@ -196,29 +227,29 @@ TODO Particularly Good
 
 Now to something really easy to do in clojure: Inconcistencies and Typos.
 This leads to debugging. All those times you have to sit with your log-file
-tracking the bug through the application could be avoided having some simple
-types checked before you ran the program. In general, strong static typing exist
-because the designers thought that it promotes best-practices. Some things you
-get, directly or indirectly are:
-1. Possibly a clearer model of your domain.
-2. Knowing you address all cases when handling a value.
-3. Refactoring out a piece of your code (maintainability)
-3. Discovering a library function without having to write it yourself
-4. Diving into a big program and better understanding whats going on.
-5. Know what a function does by only reading the type signature.
-   (How many ways can foo :: (a, b) -> a be implemented?)
-7. Know what a function does only by reading the well-defined name and type
-   signature. (List.Split.chunksOf :: Int -> [a] -> [[a]]) vs
-   (defn chunks-of [n xs] ...)
-8. Knowing when side effects occur and what kind
-   fetch :: URL -> AJAX String
+tracking the bug through the application is because you had a runtime-error and
+this could've been prevented using a type checker.
+Here is some additional things you get using a type checker. Good or bad?
+* Knowledge of handling all possible values
+* Being forced to think more up front about your design.
+* Refactoring out a piece of your code (maintainability)
+* Discovering a library function without having to write it yourself (hoogle)
+* Know what a function does by only reading the type signature.
+  (How many ways can foo :: (a, b) -> a be implemented?)
+* Diving into a big program and better understanding whats going on.
+* Know what a function does only by reading the well-defined name and type
+  signature. (List.Split.chunksOf :: Int -> [a] -> [[a]]) vs
+  (defn chunks-of [n xs] ...)
+* Knowing when side effects occur and what kind
+  fetch :: URL -> AJAX String
 
-On the flip side it can be argued that all of these things solve rather small
-problems in relation to the big problems in software engineering. Things such as
-<!--misconception of problem domain and communication between
-external libraries/database etc. And of course, a
-haskell-like typechecker could not catch all of those. In addition, types can
-give you a false sense of security: If it compiles it works.
+These are nice things sure, and they might make some things easier. But on the
+flip side it can be argued that these things are very small compared to the
+real problems in real business applications. Things such as
+<!--misconception of problem domain and communication between external
+libraries/database etc. And of course, a haskell-like typechecker could not
+catch all of those. In addition, types can give you a false sense of security:
+If it compiles it works.
 
 So practically, it comes down to
 * time/effort it takes playing type-tetris
