@@ -42,3 +42,13 @@ multiplyPoint p2@Point2d{} = (p.x) * (p.z)
 -- Above is compile time error
 
 -- end snippet safe-records
+
+
+-- start snippet type-signatures
+foo :: (a, b) -> a
+
+List.Split.chunksOf :: Int -> [a] -> [[a]]
+
+fetch :: URL -> AJAX String
+
+-- end snippet type-signatures
