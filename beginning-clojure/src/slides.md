@@ -1,6 +1,6 @@
 ---
 title:      The dynamic vs the static world
-subtitle:   Clojure and Haskell
+subtitle:   Are types evil?
 author:     Ludvig Sundström
 date:       November 2017, Bonn
 colorlinks: true
@@ -11,37 +11,43 @@ classoption:
 ---
 # Introduction
 
-## What is this talk?
+## This talk
 
 - Who am I
 
-- Motivation
+- Why am I talking about discussing this?
 
-## Contents
+## Structure
 
-- Clojure and Haskell Origins and Creators
+- Clojure and Haskell: Origins and Creators
 
-- Clojure and Haskell Design Goals and Use cases
+- Clojure and Haskell: Design Goals and Use cases
 
-- The Dynamic vs The Static World
+- Clojure and Haskell: Which one to pick?
 
 <!---
 
-Hi everyone. This talk is called The dynamic vs the static world: Clojure and
-Haskell and is going to be a language meta-discussion for anyone interested in
-languages.
+Hi everyone. This talk is called The dynamic vs the static world: Are types
+evil?  and is going to be a language meta-discussion for anyone interested in
+languages and our ways of expressing computation.
 
 For those who don't know me, I'm a Computer Science student at Bonn
-University. Apart from that, I've just had an internship here at doctronic and
+University.
+
+Apart from that, I've just had an internship here at doctronic and
 through that I've seen how fast and painless you can develop systems with
-Clojure, that works and does what the customer want. However, this was the first
-time I was actually writing lisp for real. I'd like to intersect this experience
-with my background and my love for strongly typed, static languages.
+Clojure, that works and does what the customer want.
+
+This was the first time I was actually writing lisp for real. I'd like to
+intersect this experience with my background and my love for strongly typed,
+static languages.
 
 At clojureconj 2017, Rich Hickey (the creator of clojure) said quite a few
 controversial statements about static typing. This kind of blew up the classical
 debate which involves static vs dynamic typing. A clash between the two
-worlds. Basically, static typing is when types of data is checked at compile
+worlds.
+
+Basically, static typing is when types of data is checked at compile
 time, and dynamic typing the types are checked at runtime. Whichever you chose for
 your language has huge implications in other areas. To illustrate this, I'm going
 to talk about clojure which is a dynamically typed language, and haskell which
@@ -60,15 +66,15 @@ discuss something.
 
 - Rich Hickey gets an idea...
 
-- Quickly spawned a large community around the language
+- Aspirations small at first, but later blew up
 
-- Cognitect now maintains the langauge and related technologies
+- Why did clojure become successful?
 
 <!---
 
 So lets talk about clojure. How did it all begin?
 
-The answer is, of course. Rich Hickey. He'd had enough with writing concurrent
+The answer is, of course: Rich Hickey. He'd had enough with writing concurrent
 programs in object oriented languages for 18 years. He had an idea for a better
 way to write programs which later became clojure, a clean, concurrent, hosted
 lisp.
@@ -79,19 +85,19 @@ told my wife: If a hundred people used this , that'd be ridiculously
 outrageous. And that's not what happened."
 
 However, after working on clojure on a while, Rich quickly realized that Clojure
-worth going for. A couple of years after the initial idea, Rich made the
-language public domain and started traveling around talking about clojure.
+was the idea of his life. A couple of years after the initial idea, Rich made
+the language public domain and started traveling around talking about clojure.
 
-There are many things that can be attributed clojures success. Clojure is based on
-a few distinct, clear ideas which I"ll talk more about later. But no piece of
-technology will get adopted if nobody knows about it. I'd argue that part of clojures
-success is Rich Hickeys excellent public speaking skills.
+There are many things that can be attributed clojures success. Clojure is based
+on a few distinct, clear ideas which I"ll talk more about later. But no piece of
+technology will get adopted if nobody knows about it. I'd argue that part of
+clojures success is Rich Hickeys excellent public speaking skills.
 
 -->
 
 ## Haskell
 
-- Miranda ('85) large influence of lazy purely functional languages.
+- Miranda ('85) influences new iteration of lazy purely functional languages.
 
 - at FPCA '87, a commettee was formed in attempt to create a unified language.
 
@@ -105,20 +111,24 @@ So lets talk about Haskell.
 
 This is a completely different story, whose starting point is more debatable.
 But lets discuss year 1985 when the computer scientist and language designer
-David Turners research had resulted in a language called Miranda. At this time,
-an interest in strongly typed lazy functional languages were growing in
-general. In 1987 we had more than a dozen Miranda-like languages, and these
-mainly used for exactly the same thing, namely to serve as a medium in research
-papers. As a result, almost all articles used a different language, and hence
-needed to spend the first paragraphs just defining the language that were being
-used.
+David Turners research had resulted in a language called Miranda.
+
+At this time, an interest in strongly typed lazy functional languages were
+growing in general. In 1987 we had more than a dozen Miranda-like languages, and
+these mainly used for exactly the same thing, namely to serve as a medium in
+research papers.
+
+As a result, almost all articles used a different language, and hence needed to
+spend the first paragraphs just defining the language that were being used.
 
 To solve this "problem", a commettee were formed at the conference on Functional
 Programming Languages and Computer Architecture to create a unified language
-that would serve as a tool for future research.  This language became
-Haskell. Haskell was thus a collaberative effort among many people over an
-extended amount of time. Ther are many names that has to be mentioned when talking
-about designing haskell. If you're interested in this, I'll link to [TODO]
+that would serve as a tool for future research.
+
+This language became Haskell. Haskell was thus a collaberative effort among many
+people over an extended amount of time. Ther are many names that has to be
+mentioned when talking about designing haskell. If you're interested in this,
+I'll link to [TODO]
 
 Today, Haskell is commonly accepted to be the de-facto standard for
 strong/static functional programming languages, and we see many modern languages
@@ -135,22 +145,35 @@ costs'.
 
 ## Clojure
 
+"A language that doesn't affect the way you think about programming is not worth knowing.”
+- Alan Perlis
+
 ### Simple made easy
 
-- Targets real world, "useful" programs
+- Simplicity
 
-- Information vs Logic driven programs
+- Programmer responsibility
+
+- Clojure targets:
+
+1. Non-elegant.
+2. Run continuously over an extended period of time.
+3. Deal with real world irregularity.
+4. Interact with other systems.
+5. Interact with humans.
+6. Remain in use for a long time.
 
 ### Hosted language
+
+- "Just a java library"
 
 - clj/cljs/cljc
 
 ### Code is Data
 
-<!---
+- If you know something, you forget that you had to learn it in the first place.
 
-"A language that doesn't affect the way you think about programming is not worth knowing.”
-- Alan Perlis
+<!---
 
 Why do we have clojure?
 
@@ -177,6 +200,7 @@ to a type contract at any point you feel like. If you really want to use monads 
 clojure - sure. You just have to implement that interface. However, nobody is
 going to tell you to learn monads in order to use clojure to its full magnitude.
 
+TODO MOVE DOWN
 Rich Hickey speaks about why enforcing things on a language level is a bad
 idea. In the real world, he says, programs are:
 
@@ -185,7 +209,6 @@ idea. In the real world, he says, programs are:
 3. Deal with real world irregularity.
 4. Interact with other systems.
 5. Interact with humans.
-6. Remain in use for a long time.
 
 I'll return to this in a while. For now, lets cover the other ideas on which
 clojure is built on.
@@ -195,12 +218,13 @@ it's own runtime. Who knows how many clojure-variants have existed that never
 got to see the light of day because their creators couldn't create efficient
 compilers. Due to the fact that clojure is a hosted language, the creators of
 clojure(script) basically just had to write a library for the respective
-environments. A practical implication of this is the .cljc extension. For anyone
-that doesn't know, the cljc extension allows you to write a single source file
-that acts like any clojure code independent on the runtime environment. You can
-thus reuse all your sources for clojure in clojurescript for example.  This is
-how I think programming will be done in the future. Write once, run on any
-compiler.
+environments.
+
+A practical implication of this is the .cljc extension. For anyone that doesn't
+know, the cljc extension allows you to write a single source file that acts like
+any clojure code independent on the runtime environment. You can thus reuse all
+your sources for clojure in clojurescript for example.  This is how I think
+programming will be done in the future. Write once, run on any compiler.
 
 A third clojure idea is that it is a lisp. Code is data, or more conceptually
 easy to understand (I think) data is code. No distinction. When this clicked for
@@ -228,7 +252,9 @@ little bit about haskell.
 
 ## Haskell
 
-- Core ideas from Category theory
+- Safe from runtime exceptions
+
+- Core abstractions from category theory.
 
 - Type systems knows you
 
@@ -237,14 +263,16 @@ little bit about haskell.
 <!---
 
 Haskell has a strong static type-system which means it's harder to get runtime-
-errors than to not get runtime errors. To obtain freedom and elegance while
-maintaining this safety, haskell makes use of very few, but very powerful
-abstractions, that gets used everywhere. Many of Haskells abstractions comes
-from category theory, a branch of mathematics that abstracts mathematics through
-composition.  Naturally, haskellers are good at composing things. Not only
-composing functions but promises, and all kinds of self-defined datatypes.
-Since programming is about dividing problems into smaller parts and then
-composing them together, many of these abstractions can be invaluable.
+errors than to not get runtime errors.
+
+To obtain freedom and elegance while maintaining this safety, haskell makes use
+of very few, but very powerful abstractions, that gets used everywhere. Many of
+Haskells abstractions comes from category theory, a branch of mathematics that
+abstracts mathematics through composition.  Naturally, haskellers are good at
+composing things. Not only composing functions but promises, and all kinds of
+self-defined datatypes.  Since programming is about dividing problems into
+smaller parts and then composing them together, many of these abstractions can
+be invaluable.
 
 Haskell programmers model their problem domain in terms of types and pure
 functions based on those types. Applying type driven development in this way,
@@ -313,12 +341,24 @@ is an integer.
 
 - Some concrete implications of the type checker
 
+1. Being forced to handle all possible values (and thus know that you have
+  handled them all).
+2. Being forced to think more up front about your design.
+3. Refactoring out a piece of your code, and easily detect if something broke
+  (maintainability).
+4. Discovering a library function without having to write it yourself (hoogle).
+6. Diving into a big program and better understanding whats going on.
+7. Know what a function does only by reading the well-defined name and type
+  (How many ways can foo :: (a, b) -> a be implemented?)
+  signature. (List.Split.chunksOf :: Int -> [a] -> [[a]]) vs
+  (defn list.split/chunks-of [n xs] ...)
+8. Knowing when side effects occur and what kind
+  fetch :: URL -> AJAX String
+
 - Some real problems in software development the type checker does not solve
 
 1. Misconception of problem domain
 2. Communicating with other systems of different constraints
-
-- Use the right tool for the job <- Zero information statement
 
 <!---
 
@@ -328,9 +368,11 @@ static type checker.
 
 I've compiled a list of features of the type checker. Good or bad?
 
-* Being forced to handle all possible values (and thus know that you have handled them all).
+* Being forced to handle all possible values (and thus know that you have
+  handled them all).
 * Being forced to think more up front about your design.
-* Refactoring out a piece of your code, and easily detect if something broke (maintainability).
+* Refactoring out a piece of your code, and easily detect if something broke
+  (maintainability).
 * Discovering a library function without having to write it yourself (hoogle).
 * Know what a function does by only reading the type signature.
   (How many ways can foo :: (a, b) -> a be implemented?)
@@ -416,7 +458,10 @@ describe structure better.
 
 No matter in how you take your stand and what technologies you use: Remember to
 stay open.  As craftsmen, we are really proud on our knowledge and our craft and
-usually have big difficulties adopting to new paradigms. Try to find the middle ground!
+usually have big difficulties adopting to new paradigms.
+
+As a conclusion: be open, try new ideas (even philosophical) and try to find the
+middle ground!
 
 -->
 
