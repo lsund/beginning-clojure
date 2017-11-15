@@ -37,9 +37,9 @@ classoption:
 
 - Miranda ('85) influences new set of languages
 
-- FPCA '87, a commettee was formed in attempt to create a unified language
+- FPCA '87, a committee was formed in attempt to create a unified language
 
-- Committee's efforts result in haskell ('90)
+- Committee's efforts result in Haskell ('90)
 
 - *"Avoid success at all costs"*
 
@@ -56,7 +56,7 @@ not worth knowing.”* - Alan Perlis
 
 ## Clojure
 
-- A hosted language: "Just a java library"
+- A hosted language: "Just a Java library"
 
 - .cljc extension for platform independent programming
 
@@ -64,7 +64,7 @@ not worth knowing.”* - Alan Perlis
 
 - Code is data: No syntax
 
-- JSX is something you have to learn, hiccup is just a clojure datastructure.
+- JSX is something you have to learn, hiccup is just a Clojure data structure.
 
 ## Clojure
 
@@ -117,18 +117,45 @@ problem/program.
 
 ## The practical approach: Other peoples view of the world
 
-*"Use the right tool for the job"* - Practictioner of best
+*"Use the right tool for the job"* - Practitioner of best
 
 - Zero information statement
 
 ## The philosophical approach: Your view of the world
 
 - platonism
-- formalism
+- Formalism
+
+## Platonists
+
+- If you are a platonist: Use Clojure!
+
+You believe:
+
+1. Mathematics stands on its own.
+2. Ideas for discovering the world must be simple and obvious.
+3. We can derive the ideas from the world around us but must be chosen with
+   care.
+4. Mathematics is discovered but not crafted.
+5. Nature is apt to mislead us.
+
+## Formalists
+
+- If you are a Formalist, use Haskell!
+
+You believe:
+
+1. Mathematics is simply the outcome of logical operations.
+2. Mathematics is created, not discovered.
+3. The only thing to discover is the ideas that nature satisfies.
+4. When the ideas are correct, they describe a precise record of what
+   is found in nature.
 
 # Questions/Comments?
 
 ## Links
+
+<http://schoolbag.info/mathematics/real/12.html>
 
 <http://www.stephendiehl.com/posts/production.html>
 
